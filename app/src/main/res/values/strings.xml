@@ -1,0 +1,166 @@
+<resources>
+    <string name="app_name">QwikTripUser</string>
+
+    <!--<string name="google_api_key">AIzaSyC_3wIXlkcJwuPO_o54ENVFOdcHnipYOcs</string>-->
+
+    <string name="shared_pref_file_name">com.qwiktrips.user.app.shared</string>
+    <string name="quickcare">QwikCare</string>
+    <string name="msg_browse_profiles">Browse profiles and book licensed beauty and wellness professionals in your local area.</string>
+    <string name="email_or_username">Email or Username</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="login">Login</string>
+    <string name="or_connect_with">Or connect with</string>
+    <!--<string name="already_have_account">Don't Have Account? Sign Up</string>-->
+    <string name="barbers">Barbers</string>
+    <string name="john_smith">Shanta Lana</string>
+    <string name="free_account">Free Account</string>
+    <string name="text_issued_licence">State-Issued ID / Driver\'s License</string>
+    <string name="upcoming">UPCOMING</string>
+    <string name="complete">COMPLETED</string>
+    <string name="txt_profile">MY PROFILE</string>
+    <string name="txt_my_wallet">MY WALLET</string>
+    <string name="txt_my_qwik_trips">MY QwikTrips</string>
+    <string name="txt_notification">NOTIFICATIONS</string>
+    <string name="txt_invite_friends">INVITE FRIENDS</string>
+    <string name="txt_help">HELP</string>
+    <string name="txt_settings">SETTINGS</string>
+    <string name="txt_log_out">LOGOUT</string>
+    <string name="qwikcare_connects_you_to_licensed_professionals_for_quick_and_n_convenient_experiences_when_and_n_where_you_want">QwikCare connects you to licensed professionals for quick and<br />convenient experiences when and<br />where you want.</string>
+    <string name="choose_a_style">Choose A Style</string>
+    <string name="haircuts">Haircuts</string>
+    <string name="available">AVAILABLE</string>
+    <string name="jon_smith">Jon Smith</string>
+    <string name="hairstylist">Hairstylist</string>
+    <string name="address">Metairie, LA, United States</string>
+    <string name="services">SERVICES</string>
+    <string name="more_information">MORE INFORMATION</string>
+    <string name="tct_book_appointment">Book Appointment</string>
+    <string name="credit_debit_card">Credit / Debit card</string>
+    <string name="txt_ok">OK</string>
+    <string name="your_appointment_is">Your appointment is</string>
+    <string name="txt_booked">Booked!</string>
+    <string name="txt_upload_license">Upload Your Professional<br />License.</string>
+    <string name="use_camera">Use Camera</string>
+    <string name="select_the_file"><u>Select the File</u></string>
+    <string name="upload_license">Upload Your Licence</string>
+    <string name="find_hairstylists">Find a Hairstylist</string>
+    <string name="_5_0">5.0</string>
+    <string name="map">MAP</string>
+    <string name="pitar_parker">Pitar Parker</string>
+    <string name="txt_arrival_time">Est.Arrival time - 10 minute</string>
+    <string name="msg_allow_us_location_permission">Allow us to detect your current location</string>
+    <string name="msg_permission_denied_not_able_detect_location">We are not able to detect your current location</string>
+    <string name="text_open_setting">Open application settings</string>
+    <string name="txt_email">Email :- </string>
+    <string name="txt_name">Name :- </string>
+    <string name="txt_address">Address :- </string>
+    <string name="txt_user_profile">User Profile</string>
+    <string name="hairstylists">HairStylists</string>
+    <string name="choose_your_preferred_style">Choose Your Preferred Style</string>
+    <string name="enter_your_zip_code_to_find_your_provider_location">Enter Your Zip Code To Find Your Provider Location</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="enable_your_gps">Enable Your GPS</string>
+    <string name="next">Next</string>
+    <string name="learn_more">Learn More</string>
+    <string name="_475_reviews">475 Reviews</string>
+    <string name="hair_dresser">Hair Dresser</string>
+    <string name="live_chat">Live Chat</string>
+    <string name="short_hair_cut">Short Hair Cut</string>
+    <string name="services_">Services</string>
+    <string name="jorge_martin">Jorge Martin</string>
+    <string name="text_comment">"This man is amazing and very experienced in his work. I really love the haristyle he has done for me and now i am 100% happy with his work "</string>
+    <string name="text_reviews">Reviews (475)</string>
+    <string name="tet_time">23-11-2020</string>
+    <string name="shanta_lana">Shanta Lana</string>
+    <string name="text_phone_number">(555) 555-1234</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="county">Country</string>
+    <string name="text_address">Address</string>
+    <string name="text_save">Save</string>
+    <string name="log_out">Logout</string>
+    <string name="log_out_message">Are you sure you want to logout?</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_your_service">Select your service</string>
+    <string name="card_holder_name">Card Holder Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_expiry">Expiry</string>
+    <string name="card_cvv">CVV</string>
+    <string name="submit_for_verification">Submit For Verification</string>
+    <string name="profile_saved_successfully">Profile Saved Successfully!</string>
+    <string name="okay">Okay</string>
+    <string name="short_hair">Short Hair</string>
+    <string name="long_hair">Long Hair</string>
+    <string name="coloring">Coloring</string>
+    <string name="active">Active</string>
+    <string name="completed">Completed</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="view_details">View Details</string>
+    <string name="dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<font color="#FFB400"><u> Lorem Ipsum has been the industry standard dummy text ever since the 1500s</u></font>, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="time">10 min ago</string>
+    <string name="appointment_completed">Appointment Completed</string>
+    <string name="your_appointment_is_completed">Your Appointment is Completed!</string>
+    <string name="msg_appointment_completed">Thanks for using QwikCare! <br></br>We appreciate your business. Please share<br></br> your <font color="#FFB400">feedback</font> with us to  let us know how we<br></br> are doing.</string>
+    <string name="share_your_feed_back">Share Your Feedback</string>
+    <string name="appointment_confirmed">Appointment Confirmed</string>
+    <string name="msg_appointment_booked">Your Appointment is Booked!</string>
+    <string name="get_your_receipt">See your booking</string>
+    <string name="summary">Summary</string>
+    <string name="total_price">Total price:</string>
+    <string name="service_fee">Service fee:</string>
+    <string name="total">Total:</string>
+    <string name="thank_you_for_booking_your_appointment_with_john_smith_to_make_sure_that_is_a_smooth_enjoyable_experience_please_do_the_following">Thank you for booking your appointment with<br></br> <font color="#000000"><b>John Smith</b></font>. To make sure that is a smooth &amp; enjoyable experience, please do the following</string>
+    <string name="arrive_on_time_be_ready_when_your_provider_arrives">Please arrive on time or be ready when your provider arrives</string>
+    <string name="text_download">Download</string>
+    <string name="text_thank_you">Thank You</string>
+    <string name="text_delete_request">Delete request</string>
+    <string name="msg_appointment_delete">Are you sure you want to delete <br></br> appointment?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="_04">04</string>
+    <string name="text_payment_option">Payment Option</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="text_confirm_payment">Confirm Payment</string>
+    <string name="text_cart">CART</string>
+
+
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="agree_to_our">Agree to our</string>
+    <string name="terms_and_condition">Terms &amp; Conditions</string>
+    <string name="signup">Sign up</string>
+    <string name="gender">Gender</string>
+    <string name="or">---------------- <font color="#000000"><b>OR</b></font> ----------------</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="signIn"><u> Sign In</u></string>
+
+    <string name="text_continue">Continue</string>
+    <string name="join_us_now"><u>Join Us Now</u></string>
+    <string name="welcome">Welcome!</string>
+    <string name="text_please_enter_otp">Please Enter Your OTP Code</string>
+
+    <string name="professional_state_licence">Professional State Licence</string>
+    <string name="would_you_recommend_qwikcare_to_others">Would you recommend <font color="#000000"><b>QwikCare</b></font> to others?</string>
+    <string name="overall_how_would_you_rate_your_qwikcare_experience">Overall, how would you \nrate your <font color="#000000"><b>QwikCare</b></font> experience?</string>
+    <string name="do_you_want_tip"><u>Do you want to tip your provider?</u></string>
+    <string name="amount_of_tip">Amount of tip</string>
+    <string name="was_booking_your_appoint_easy">Was booking your appoint easy?</string>
+    <string name="book_now">Book Now</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="facebook_app_id">840138290218049</string>
+    <string name="fb_login_protocol_scheme">fb840138290218049</string>
+    <string name="fullname">Please enter your name</string>
+    <string name="err_gender">please enter your gender</string>
+    <string name="err_mobile">please enter your mobile number</string>
+    <string name="err_image">please upload photo</string>
+    <string name="msg_no_internet">Internet is not connected. please connect to internet first!</string>
+    <string name="msg_invalid_mobile_number">Invalid mobile number!</string>
+
+</resources>

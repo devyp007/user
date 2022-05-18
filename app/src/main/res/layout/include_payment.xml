@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="type"
+            type="int" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/ll_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/bg_payment"
+        android:onClick="@{viewHandler::onItemClicked}"
+        android:orientation="horizontal"
+        android:padding="@dimen/_6sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:src="@{type == 0 ? @drawable/paypal : type == 1?@drawable/google_pay :type == 2?@drawable/apple_pay :type == 3?@drawable/bit_coin :@drawable/card}"
+            tools:src="@drawable/paypal" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="@{type == 4? View.GONE : View.VISIBLE}" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Widget.QuickTrip.Text.Title"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="@string/credit_debit_card"
+            android:textStyle="italic"
+            android:visibility="@{type == 4? View.VISIBLE : View.GONE}"
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_next" />
+
+    </LinearLayout>
+
+
+</layout>

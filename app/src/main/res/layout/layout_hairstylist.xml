@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.hairstylist.HairStylistViewModel" />
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="adapter"
+            type="com.qwiktrips.user.app.ui.hairstylist.adapter.HairStylistAdapter" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.hairstylist.HairStylistActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_hairstylist_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/hair_style" />
+
+            <include
+                layout="@layout/layout_toolbar"
+                app:heading="@{`Hairstylists`}"
+                app:viewHandler="@{viewHandler}" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Widget.QuickTrip.Text.Heading"
+            android:gravity="start"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/choose_a_style"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_hairstylist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adapter="@{adapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/layout_item_hairstylist" />
+
+    </LinearLayout>
+
+</layout>

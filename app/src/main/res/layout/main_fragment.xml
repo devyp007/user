@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="adapter"
+            type="com.qwiktrips.user.app.ui.main.adapter.MainServiceAdapter" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.main.MainViewModel" />
+
+        <variable
+            name="type"
+            type="int" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <include
+            layout="@layout/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{type == 0? View.VISIBLE: View.GONE }"
+            app:adapter="@{adapter}"
+            app:viewHandler="@{viewHandler}" />
+
+        <include
+            android:id="@+id/include_appointment_booked"
+            layout="@layout/layout_appointment_booked"
+            android:visibility="@{type == 1? View.VISIBLE: View.GONE }" />
+
+        <include
+            layout="@layout/include_upload_licence"
+            android:visibility="@{type == 2? View.VISIBLE: View.GONE }" />
+
+
+    </LinearLayout>
+
+</layout>

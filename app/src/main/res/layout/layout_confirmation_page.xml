@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.hairstylist.select.SelectHairStyleViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                style="@style/Widget.QuickTrip.Text.Large.Black.Bold"-->
+<!--                android:text="@string/summary" />-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_2sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Black"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/total_price"
+                            android:textAlignment="textStart" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Black"
+                            android:layout_width="wrap_content"
+                            android:text="$300" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Black"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/service_fee"
+                            android:textAlignment="textStart" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Black"
+                            android:layout_width="wrap_content"
+                            android:text="$50" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/dark_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Black.Bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/total"
+                            android:textAlignment="textStart" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Black.Bold"
+                            android:layout_width="wrap_content"
+                            android:text="$350" />
+
+                    </LinearLayout>
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        style="@style/Widget.QuickTrip.Text"-->
+<!--                        android:layout_marginTop="@dimen/_13sdp"-->
+<!--                        android:text="@string/thank_you_for_booking_your_appointment_with_john_smith_to_make_sure_that_is_a_smooth_enjoyable_experience_please_do_the_following" />-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@color/dark_gray" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_5sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_top_tick"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            app:srcCompat="@drawable/ic_green_tick" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Black.Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_toEndOf="@id/iv_top_tick"
+                            android:text="@string/arrive_on_time_be_ready_when_your_provider_arrives"
+                            android:textAlignment="textStart" />
+
+
+                        <View
+                            android:id="@+id/iv_green_line"
+                            android:layout_width="3dp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_below="@id/iv_top_tick"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@color/green" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_below_tick"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_below="@id/iv_green_line"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            app:srcCompat="@drawable/ic_green_tick" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Black.Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_below="@id/iv_green_line"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_toEndOf="@id/iv_below_tick"
+                            android:letterSpacing=".05"
+                            android:text="Please make sure that there are no distractions(children,pets..)"
+                            android:textAlignment="textStart" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_gravity="end"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Black.Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:text="@string/text_download" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:padding="@dimen/_7sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:background="@drawable/bg_light_orange"
+                            app:srcCompat="@drawable/ic_download" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rl_thank_you"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg_yellow_rect"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Black.Bold"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="@string/text_thank_you" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

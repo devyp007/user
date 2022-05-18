@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.hairstylist.HairStylistViewModel" />
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="adapter"
+            type="com.qwiktrips.user.app.ui.hairstylist.adapter.HairStylistAdapter" />
+
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <include
+            android:id="@+id/include_layout_hairstylist"
+            layout="@layout/layout_hairstylist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:adapter="@{adapter}"
+            app:viewHandler="@{viewHandler}"
+            app:viewModel="@{viewModel}" />
+
+        <include
+            android:id="@+id/include_drawer"
+            layout="@layout/layout_drawer"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="start"
+            app:viewHandler="@{viewHandler}"
+            />
+
+<!--        <com.google.android.material.navigation.NavigationView-->
+<!--            android:id="@+id/nav_view_main"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="start"-->
+<!--            android:background="@{viewModel.drawerObserver.type==1? @drawable/bg_nav_small : @drawable/bg_nav, default=@drawable/bg_nav_small}"-->
+<!--            android:fitsSystemWindows="true"-->
+<!--            android:visibility="gone"-->
+<!--            app:headerLayout="@layout/layout_drawer" />-->
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

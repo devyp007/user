@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--Text Styles-->
+    <style name="Widget" />
+
+    <style name="Widget.QuickTrip" />
+
+    <style name="Widget.QuickTrip.Text">
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Black" parent="Widget.QuickTrip.Text">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Black.Bold" parent="Widget.QuickTrip.Text.Black">
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.White" parent="Widget.QuickTrip.Text">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.White.Bold" parent="Widget.QuickTrip.Text.White">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Gray" parent="Widget.QuickTrip.Text">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/darker_gray</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Gray.Bold" parent="Widget.QuickTrip.Text.Gray">
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.Black" parent="Widget.QuickTrip.Text.Title">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.Black.Bold" parent="Widget.QuickTrip.Text.Title.Black">
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.White" parent="Widget.QuickTrip.Text.Title">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.Yellow" parent="Widget.QuickTrip.Text.Title">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.White.Bold" parent="Widget.QuickTrip.Text.Title.White">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.Yellow.Bold" parent="Widget.QuickTrip.Text.Title.Yellow">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.Gray" parent="Widget.QuickTrip.Text.Title">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/darker_gray</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.Gray.Bold" parent="Widget.QuickTrip.Text.Title.Gray">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Large">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_big_title</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Large.Black" parent="Widget.QuickTrip.Text.Large">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Large.Black.Bold" parent="Widget.QuickTrip.Text.Large.Black">
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Large.White" parent="Widget.QuickTrip.Text.Large">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Large.White.Bold" parent="Widget.QuickTrip.Text.Large.White">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Large.Gray" parent="Widget.QuickTrip.Text.Large">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/darker_gray</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Large.Gray.Bold" parent="Widget.QuickTrip.Text.Large.Gray">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Large.Light">
+        <item name="android:textSize">@dimen/text_size_big_title</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Subtitle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Subtitle.Black" parent="Widget.QuickTrip.Text.Subtitle">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Subtitle.White" parent="Widget.QuickTrip.Text.Subtitle">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Subtitle.White.Bold" parent="Widget.QuickTrip.Text.Subtitle.White">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Subtitle.Gray" parent="Widget.QuickTrip.Text.Subtitle">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Subtitle.Gray.Bold" parent="Widget.QuickTrip.Text.Subtitle.Gray">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Heading">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_heading</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Heading.Black" parent="Widget.QuickTrip.Text.Heading">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Heading.White" parent="Widget.QuickTrip.Text.Heading">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Heading.White.Bold" parent="Widget.QuickTrip.Text.Heading.White">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Heading.Gray" parent="Widget.QuickTrip.Text.Heading">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Heading.Gray.Bold" parent="Widget.QuickTrip.Text.Heading.Gray">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Small.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Black.White" parent="Widget.QuickTrip.Text.Small">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Small.White" parent="Widget.QuickTrip.Text.Small">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Small.Red" parent="Widget.QuickTrip.Text.Small.White">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Small.Gray" parent="Widget.QuickTrip.Text.Small">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Small.Gray.Bold" parent="Widget.QuickTrip.Text.Small.Gray">
+    <item name="fontFamily">@font/poppins_regular</item>
+    <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Tiny">
+        <item name="android:textSize">@dimen/text_size_tiny</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Tiny.Black" parent="Widget.QuickTrip.Text.Tiny">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Tiny.White" parent="Widget.QuickTrip.Text.Tiny">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Tiny.White.Bold" parent="Widget.QuickTrip.Text.Tiny.White">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Tiny.Gray" parent="Widget.QuickTrip.Text.Tiny">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Tiny.Gray.Bold" parent="Widget.QuickTrip.Text.Tiny.Gray">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- - -->
+
+    <style name="Widget.QuickTrip.Text.Title.Regular" parent="Widget.QuickTrip.Text.Title">
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.Regular.Bold" parent="Widget.QuickTrip.Text.Title.Regular">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.Thin" parent="Widget.QuickTrip.Text.Title">
+        <item name="fontFamily">@font/poppins_thin</item>
+    </style>
+
+
+    <style name="Widget.QuickTrip.Text.Title.Light" parent="Widget.QuickTrip.Text.Title">
+        <item name="fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.Bold" parent="Widget.QuickTrip.Text.Title">
+        <item name="fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Title.SemiBold" parent="Widget.QuickTrip.Text">
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+    </style>
+
+    <!-- - -->
+
+    <style name="Widget.QuickTrip.Text.Regular" parent="Widget.QuickTrip.Text">
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Thin" parent="Widget.QuickTrip.Text">
+        <item name="fontFamily">@font/poppins_thin</item>
+    </style>
+
+
+    <style name="Widget.QuickTrip.Text.Light" parent="Widget.QuickTrip.Text">
+        <item name="fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.Bold" parent="Widget.QuickTrip.Text">
+        <item name="fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.SemiBold" parent="Widget.QuickTrip.Text">
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+    </style>
+
+    <!--Edit Text Style-->
+
+    <style name="Widget.QuickTrip.Text.Content.EditText" parent="Widget.QuickTrip.Text">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Text.EditText.White" parent="Widget.QuickTrip.Text.Content.EditText">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="background">@color/white</item>
+
+    </style>
+
+    <style name="Widget.QuickTrip.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardForegroundColor">@null</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardCornerRadius">@dimen/_10sdp</item>
+        <item name="cardElevation">@dimen/_6sdp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Card.Shadow" parent="Widget.QuickTrip.Card" tools:targetApi="p">
+        <item name="android:outlineAmbientShadowColor">@color/black</item>
+        <item name="android:outlineSpotShadowColor">@color/black</item>
+        <item name="rippleColor">@color/black</item>
+    </style>
+
+
+    <style name="Widget.QuickTrip.Card.Shadow.Green" parent="Widget.QuickTrip.Card.Shadow" tools:targetApi="p">
+        <item name="android:outlineAmbientShadowColor">@color/gray</item>
+        <item name="android:outlineSpotShadowColor">@color/gray</item>
+    </style>
+
+    <style name="Widget.QuickTrip.RatingBar" parent="Widget.QuickTrip">
+        <item name="android:progressTint">@color/primary_color</item>
+        <item name="android:progressBackgroundTint">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Widget.QuickTrip.RatingBar.White" parent="Widget.QuickTrip.RatingBar">
+        <item name="android:progressTint">@color/primary_color</item>
+        <item name="android:progressBackgroundTint">@color/gray</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:numStars">5</item>
+    </style>
+
+    <style name="Widget.QuickTrip.RatingBar.Orange" parent="Widget.QuickTrip.RatingBar">
+        <item name="android:progressTint">@color/color_orange</item>
+        <item name="android:progressBackgroundTint">@color/gray</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:numStars">5</item>
+    </style>
+
+    <style name="Widget.QuickTrip.Layout" parent="Widget.QuickTrip">
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+    </style>
+
+
+
+    <style name="Widget.QwikTrip.SearchView" parent="Widget.QuickTrip.Text">
+        <item name="android:padding">@dimen/_3sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+        <item name="android:queryBackground">@android:color/transparent</item>
+        <item name="queryBackground">@android:color/transparent</item>
+        <item name="iconifiedByDefault">false</item>
+        <item name="android:textColorHint">@color/black</item>
+    </style>
+
+
+
+</resources>

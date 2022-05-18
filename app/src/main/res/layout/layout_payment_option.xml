@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.hairstylist.select.SelectHairStyleViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    app:srcCompat="@drawable/ic_back" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Large.Black.Bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text="@string/text_payment_option" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_toolbar"
+                android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Large.Black.Bold"
+                    android:text="Card payment"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textAlignment="textStart" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardMaxElevation="@dimen/_3sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        app:srcCompat="@drawable/ic_mastercard" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Title.Black"
+                            android:text="Mastercard"
+                            android:textAlignment="textStart" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Small"
+                            android:text="564 *** **** **784"
+                            android:textAlignment="textStart" />
+
+
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardMaxElevation="@dimen/_3sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        app:srcCompat="@drawable/ic_mastercard" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Title.Black"
+                            android:text="Mastercard"
+                            android:textAlignment="textStart" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Small"
+                            android:text="564 *** **** **784"
+                            android:textAlignment="textStart" />
+
+
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical" />
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_top_round_corners"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Title.Black.Bold"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:text="@string/total_bill" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Black"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/total_price"
+                        android:textAlignment="textStart" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Black"
+                        android:layout_width="wrap_content"
+                        android:text="$300" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Black"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/service_fee"
+                        android:textAlignment="textStart" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Black"
+                        android:layout_width="wrap_content"
+                        android:text="$50" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Black.Bold"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/total"
+                        android:textAlignment="textStart" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Black.Bold"
+                        android:layout_width="wrap_content"
+                        android:text="$350" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@color/dark_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_confirm_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/bg_yellow_rect"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Black.Bold"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:text="@string/text_confirm_payment" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</layout>

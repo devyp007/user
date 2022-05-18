@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="@dimen/_155sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:background="@drawable/back_style">
+
+        <FrameLayout
+            android:id="@+id/fl_hairstylist_image"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <FrameLayout
+                android:id="@+id/cild_frame"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_payment">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_user_image"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_hairstylist"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/back_style" />
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_header_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toEndOf="@id/fl_hairstylist_image">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_stylist_name"
+                style="@style/Widget.QuickTrip.Text.White.Bold"
+                android:text="@string/short_hair_cut"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RatingBar
+            android:id="@+id/rating_agent"
+            style="@style/Widget.QuickTrip.RatingBar.White"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_below="@id/rl_header_name"
+            android:layout_marginTop="-15dp"
+            android:layout_toEndOf="@id/fl_hairstylist_image"
+            android:layout_marginStart="-88dp"
+            android:background="@android:color/transparent"
+            android:numStars="5"
+            android:rating="4.5"
+            android:scaleX="0.15"
+            android:scaleY="0.2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Widget.QuickTrip.Text.Tiny"
+            android:layout_below="@id/rl_header_name"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@id/rating_agent"
+            android:layout_marginStart="-85dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textSize="@dimen/_6sdp"
+            android:text="@string/_475_reviews"/>
+
+
+        <RelativeLayout
+            android:id="@+id/ll_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl_hairstylist_image"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_navigation"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_location"
+                android:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_address"
+                style="@style/Widget.QuickTrip.Text.Tiny.White.Bold"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@id/iv_navigation"
+                android:textSize="@dimen/_7sdp"
+                android:text="@string/address"
+                android:textAlignment="center" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tv_address"
+                android:buttonTint="@color/yellow" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

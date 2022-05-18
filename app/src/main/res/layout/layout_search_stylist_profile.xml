@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.hairstylist.select.SelectHairStyleViewModel" />
+
+        <variable
+            name="serviceAdapter"
+            type="com.qwiktrips.user.app.ui.hairstylist.adapter.StylistServiceAdapter" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        tools:ignore="MissingClass">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_searched_stylist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_300sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/back_searched_haristylist" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_170sdp">
+
+
+                    <FrameLayout
+                        android:id="@+id/fl_hairstylist_image"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_10sdp">
+
+                        <FrameLayout
+                            android:id="@+id/cild_frame"
+                            android:layout_width="@dimen/_55sdp"
+                            android:layout_height="@dimen/_55sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_btn_yellow">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_user_image"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_gravity="center"
+                                app:cardCornerRadius="@dimen/_10sdp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/iv_hairstylist"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/user" />
+                            </androidx.cardview.widget.CardView>
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_available"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_gravity="end|bottom"
+                            android:layout_marginEnd="-2sp"
+                            android:layout_marginBottom="-2dp"
+                            android:src="@drawable/available" />
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_header_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toEndOf="@id/fl_hairstylist_image">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_stylist_name"
+                            style="@style/Widget.QuickTrip.Text.Large.White.Bold"
+                            android:text="@string/jon_smith"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_23sdp"
+                            android:textStyle="bold" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_hair_style"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_below="@id/tv_stylist_name"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_hair_style" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_style_type"
+                            style="@style/Widget.QuickTrip.Text.White.Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_below="@id/tv_stylist_name"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_toEndOf="@id/iv_hair_style"
+                            android:text="@string/hair_dresser"
+                            android:textAlignment="textStart" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_below="@id/tv_stylist_name"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_toEndOf="@id/tv_style_type"
+                            app:srcCompat="@drawable/ic_verified" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/ll_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_header_name"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_navigation"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_location"
+                            android:tint="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_address"
+                            style="@style/Widget.QuickTrip.Text.White.Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_toEndOf="@id/iv_navigation"
+                            android:letterSpacing=".1"
+                            android:text="@string/address"
+                            android:textAlignment="center" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_star"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_toEndOf="@id/tv_address"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/star" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_toEndOf="@id/iv_star"
+                            android:text="@string/_475_reviews"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:onClick="@{viewHandler::onItemClicked}"
+                    android:src="@drawable/ic_back"
+                    app:tint="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/ll_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rl_header"
+                    android:layout_marginStart=".9dp"
+                    android:layout_marginEnd=".9dp"
+                    android:background="@drawable/bg_top_round_corners_light_gray"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        app:srcCompat="@drawable/ic_minus" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="@drawable/bg_green_rect"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_6sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginStart="@dimen/_6sdp"
+                                app:srcCompat="@drawable/live_chat" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/Widget.QuickTrip.Text.Title.White.Bold"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:text="@string/live_chat" />
+
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/btn_message"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:layout_marginStart="@dimen/_35sdp"
+                            android:background="@drawable/bg_green_rect"
+                            android:onClick="@{viewHandler::onItemClicked}"
+                            android:padding="@dimen/_10sdp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_message" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_question_mark"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:background="@drawable/bg_green_rect"
+                            android:onClick="@{viewHandler::onItemClicked}"
+                            android:padding="@dimen/_10sdp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_mark" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_star_stylist"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:background="@drawable/bg_green_rect"
+                            android:onClick="@{viewHandler::onItemClicked}"
+                            android:padding="@dimen/_10sdp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_white_star" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Heading"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="@string/services_"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_stylist_service"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:adapter="@{serviceAdapter}"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/layout_style_service" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_last_booked"
+                        style="@style/Widget.QuickTrip.Text.Heading"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:layout_weight="1"
+                        android:onClick="@{viewHandler::onItemClicked}"
+                        android:singleLine="true"
+                        android:text="Last booked and favourites"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_stylist_review"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/layout_last_booked_item" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_book_appointment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/bg_btn_yellow"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:letterSpacing="0.05"
+                        android:onClick="@{viewHandler::onItemClicked}"
+                        android:text="@string/tct_book_appointment"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_preferred"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rl_header"
+                    android:background="@drawable/bg_top_round_corners_light_gray"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        app:srcCompat="@drawable/ic_minus" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Title"
+                            android:layout_marginTop="@dimen/_50sdp"
+                            android:text="Would like to use this provider again? \nAdd John Smith to your QwikCare favourite \n provider's List for faster booking options!" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_preferred"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_70sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_btn_yellow"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:letterSpacing="0.05"
+                            android:onClick="@{viewHandler::onItemClicked}"
+                            android:text="Add To Favourite"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/include_layout_about_provider"
+                layout="@layout/layout_about_provider"
+                android:visibility="gone"
+                app:viewHandler="@{viewHandler}"
+                app:viewModel="@{viewModel}"
+                tools:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

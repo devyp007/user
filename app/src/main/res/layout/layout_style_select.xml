@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.hairstylist.select.SelectHairStyleViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:orientation="vertical"
+        tools:ignore="UnusedAttribute">
+
+        <LinearLayout
+            android:id="@+id/ll_style_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_et"
+            android:onClick="@{viewHandler::onItemClicked}"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_style_select"
+                style="@style/Widget.QuickTrip.Text.Content.EditText"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:onClick="@{viewHandler::onItemClicked}"
+                android:gravity="start"
+                android:letterSpacing=".1"
+                android:text="@{viewModel.observer.styleSelectText}"
+                android:textColor="@color/darker_gray"
+                tools:text="@string/select_your_service" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_gender_drop_down"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:onClick="@{viewHandler::onItemClicked}"
+                android:src="@drawable/ic_arrow_drop_down"
+                android:visibility="@{viewModel.observer.dropDown == true? View.GONE : View.VISIBLE}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_gender_drop_up"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:onClick="@{viewHandler::onItemClicked}"
+                android:src="@drawable/ic_arrow_drop_up"
+                android:visibility="@{viewModel.observer.dropDown == true? View.VISIBLE : View.GONE}" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginTop="-3dp"
+            android:visibility="@{viewModel.observer.dropDown == true? View.VISIBLE : View.GONE}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/layout_style_item"
+            tools:visibility="gone" />
+    </LinearLayout>
+
+
+</layout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.signup.SignupViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/back_selfie_img" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:onClick="@{viewHandler::onItemClicked}"
+            android:src="@drawable/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rl_selfie_image"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:src="@drawable/qwik_care_yellow" />
+
+        <RelativeLayout
+            android:id="@+id/rl_selfie_image"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_above="@id/tv_take_selfie"
+            android:layout_centerInParent="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:onClick="onItemClicked"
+                android:src="@drawable/circle_img" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_upload"
+                android:layout_width="39dp"
+                android:layout_height="37dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:onClick="onItemClicked"
+                android:src="@drawable/selfie_upload" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_take_selfie"
+            style="@style/Widget.QuickTrip.Text.Large.Black.Bold"
+            android:layout_above="@id/tv_message"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:text="Take Selfie"
+            android:textAlignment="center" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_message"
+            style="@style/Widget.QuickTrip.Text.Title"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:text="Upload a clear picture of your face, so we can detect and activate your account"
+            android:textAlignment="center" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_message"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@drawable/bg_yellow"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:onClick="@{viewHandler::onItemClicked}"
+            android:text="@string/next"
+            android:textSize="@dimen/_13sdp" />
+
+    </RelativeLayout>
+
+
+</layout>

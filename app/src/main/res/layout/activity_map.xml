@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.map.MapViewModel" />
+
+        <variable
+            name="type"
+            type="int" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <include
+            android:id="@+id/include_layout_map"
+            layout="@layout/layout_map"
+            android:visibility="@{type == 0? View.VISIBLE: View.GONE }"
+            app:viewHandler="@{viewHandler}"/>
+
+        <include
+            android:id="@+id/include_appointment_booked"
+            layout="@layout/layout_appointment_booked"
+            android:visibility="@{type == 1? View.VISIBLE: View.GONE }" />
+
+
+<!--        <com.google.android.material.navigation.NavigationView-->
+<!--            android:id="@+id/nav_view_main"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="start"-->
+<!--            android:background="@{viewModel.drawerObserver.type==1? @drawable/bg_nav_small : @drawable/bg_nav, default=@drawable/bg_nav_small}"-->
+<!--            android:fitsSystemWindows="true"-->
+<!--            app:headerLayout="@layout/layout_drawer" />-->
+
+        <include
+            android:id="@+id/include_drawer"
+            layout="@layout/layout_drawer"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="start"
+            app:viewHandler="@{viewHandler}"
+            />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

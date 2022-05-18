@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.appointment.MyAppointmentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".ui.main.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:background="@color/primary_color"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:onClick="@{viewHandler::onItemClicked}"
+                android:paddingTop="@dimen/_3sdp"
+                android:src="@drawable/ic_back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.QuickTrip.Text.Large"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="My Appointments"
+                android:textStyle="bold" />
+
+      <!--      <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_home"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:onClick="@{viewHandler::onItemClicked}"
+                android:src="@drawable/ic_home"
+                android:tint="@color/black" />-->
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_6sdp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_active"
+                    style="@style/Widget.QuickTrip.Text"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:onClick="@{viewHandler::onItemClicked}"
+                    android:text="@string/active"
+                    android:textColor="@{viewModel.observer.appointmentStatus == 1 ? @color/color_orange : @color/text_color}"
+                    android:textSize="@{viewModel.observer.appointmentStatus == 1 ? @dimen/_13sdp : @dimen/_10sdp}"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_completed"
+                    style="@style/Widget.QuickTrip.Text"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:onClick="@{viewHandler::onItemClicked}"
+                    android:text="@string/completed"
+                    android:textColor="@{viewModel.observer.appointmentStatus == 2 ? @color/color_orange : @color/text_color}"
+                    android:textSize="@{viewModel.observer.appointmentStatus == 2 ? @dimen/_13sdp : @dimen/_10sdp}"
+                    android:textStyle="bold" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_cancelled"
+                    style="@style/Widget.QuickTrip.Text"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:onClick="@{viewHandler::onItemClicked}"
+                    android:text="@string/cancelled"
+                    android:textColor="@{viewModel.observer.appointmentStatus == 3 ? @color/color_orange : @color/text_color}"
+                    android:textSize="@{viewModel.observer.appointmentStatus == 3 ? @dimen/_13sdp : @dimen/_10sdp}"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_appointment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/layout_appointment_item" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_view_all_appointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/bg_yellow_rect"
+            android:onClick="@{viewHandler::onItemClicked}"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_appointment_status"
+                style="@style/Widget.QuickTrip.Text.Black.Bold"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="@{viewModel.observer.appointmentStatus == 1 ? `View All Appointments` : `View All Completed`}" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

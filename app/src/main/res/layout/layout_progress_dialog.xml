@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+
+        <com.qwiktrips.user.app.utils.custom.CustomProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            app:direction="clockwise"
+            app:dotColor="@color/primary_color"
+            app:dotWidth="13dp"
+            app:drawDot="true"
+            app:enableProgressAnimation="true"
+            app:fillBackground="false"
+            app:gradientEndColor="@color/light_gray"
+            app:gradientType="linear"
+            app:isStroke="true"
+            app:progressBackgroundColor="@android:color/transparent"
+            app:progressBackgroundStrokeWidth="4dp"
+            app:progressCap="round"
+            app:progressColor="@color/white"
+            app:progressStrokeWidth="8dp"
+            app:startAngle="270"
+            app:strokeColor="@color/white"
+            app:textColor="@color/white"
+            app:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Widget.QuickTrip.Text.Title.White"
+            android:text="Verifying..."
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</layout>

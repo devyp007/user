@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="body"
+            type="String" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_white_round_corner"
+            android:minWidth="@dimen/_300sdp"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.QuickTrip.Text.Title.Black.Bold"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="@{title}"
+                tools:hint="@string/app_name"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.QuickTrip.Text.Black"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="@{body}"
+                tools:hint="@string/app_name"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/primary_color"
+                app:cardCornerRadius="@dimen/_20sdp">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:onClick="@{viewHandler::onItemClicked}"
+                    android:text="@string/okay"
+                    android:textAllCaps="false" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

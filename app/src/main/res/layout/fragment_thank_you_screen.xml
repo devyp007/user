@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.signup1.fragment.ThankYouScreenFragment"
+    android:background="@drawable/back_thankyou"
+    android:orientation="vertical">
+    <ImageButton
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/buttonBack"
+        android:src="@drawable/ic_back"
+        android:scaleType="fitXY"
+        android:background="@drawable/flag_transparent"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:src="@drawable/qwik_care_yellow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/tv_takeSelfie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Thank you for creating your free\n QwikCare Account"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            />
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Your information has been submitted for review. This \n can take between 24-72 hours, in some cases longer. If\n approved you will be notifiedand your account will be \n activated immediately.If you are not approved, we will\n send you an emailwith an explanation.Unfortunately, if\n you are not approved your account will not be\n activated until you meet our company policies.  "
+            android:gravity="center"
+            android:textSize="12dp"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            />
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:textColor="@color/black"
+            android:background="@drawable/button_shape"
+            />
+    </LinearLayout>
+
+</LinearLayout>

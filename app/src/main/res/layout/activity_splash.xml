@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.splash.SplashActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/splash" />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_60sdp"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/qwik_trips" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_qwik_care"
+                android:layout_above="@+id/tv_qwik"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/qwik_care"
+                android:layout_marginLeft="@dimen/_20sdp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_qwik"
+                    style="@style/Widget.QuickTrip.Text.Title.Black"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/_80sdp"
+                    android:text="QwikCare connects you to \n licensed professionals for quick and convenient experiences when and where you want."
+                    android:textAlignment="textStart" />
+            </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/loading" />
+    </RelativeLayout>
+
+</layout>

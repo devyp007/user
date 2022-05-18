@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.signup1.fragment.AddressFragment"
+    android:background="@drawable/background_add"
+    android:orientation="vertical">
+    <ImageButton
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/buttonBack"
+        android:src="@drawable/ic_back"
+        android:scaleType="fitXY"
+        android:background="@drawable/flag_transparent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_65sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:src="@drawable/qwik_care_yellow" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please complete your Profile"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please upload your Professional State\n License / certification"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:textSize="@dimen/_12sdp"
+            android:hint="Professional State License"
+            android:drawableLeft="@drawable/icon_location"
+            android:drawableRight="@drawable/icon_user"
+            android:background="@drawable/edittext_shape"
+            android:drawablePadding="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Files Format"
+                android:textColor="#FB0505"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jpg,Pdf,Doc.."
+                android:textColor="#FB0505"
+                android:gravity="end"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Home Address"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:hint="#947 Chandigarh"
+            android:textSize="@dimen/_12sdp"
+            android:drawableLeft="@drawable/icon_location"
+            android:background="@drawable/edittext_shape"
+            android:drawablePadding="20dp"/>
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Business Address"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:hint="#947 Chandigarh"
+            android:textSize="@dimen/_12sdp"
+            android:drawableLeft="@drawable/icon_location"
+            android:background="@drawable/edittext_shape"
+            android:drawablePadding="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If Applicable"
+            android:textColor="#FB0505"
+            android:layout_gravity="end"
+            android:background="@drawable/edittext_shape"/>
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:textColor="@color/black"
+            android:background="@drawable/button_shape"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

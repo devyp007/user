@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lighter_gray">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:onClick="@{viewHandler::onItemClicked}"
+            android:src="@drawable/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_qwik_care"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:src="@drawable/qwik_care_yellow" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_qwik_care"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_master_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:src="@drawable/master_card" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Bold"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:text="@string/card_holder_name"
+                    android:textColor="@color/drawer_color"
+                    android:textAlignment="viewStart" />
+
+                <include
+                    android:id="@+id/include_card_holder_name"
+                    layout="@layout/layout_payment_et"
+                    app:inputType="@{1}"
+                    app:text="@{`Shanta Lana`}"
+                    app:viewHandler="@{viewHandler}" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Gray.Bold"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:textColor="@color/drawer_color"
+                    android:text="@string/card_number"
+                    android:textAlignment="viewStart" />
+
+                <include
+                    android:id="@+id/include_card_number"
+                    layout="@layout/layout_payment_et"
+                    app:inputType="@{2}"
+                    app:text="@{`4259540934813034`}"
+                    app:viewHandler="@{viewHandler}" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Gray.Bold"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:textColor="@color/drawer_color"
+                            android:text="@string/card_expiry"
+                            android:textAlignment="viewStart" />
+
+                        <include
+                            android:id="@+id/include_expiry"
+                            layout="@layout/layout_payment_et"
+                            app:inputType="@{2}"
+                            app:text="@{`05/19`}"
+                            app:viewHandler="@{viewHandler}" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Gray.Bold"
+                            android:textColor="@color/drawer_color"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:text="@string/card_cvv"
+                            android:textAlignment="viewStart" />
+
+                        <include
+                            android:id="@+id/include_cvv"
+                            layout="@layout/layout_payment_et"
+                            app:inputType="@{2}"
+                            app:text="@{`1234`}"
+                            app:viewHandler="@{viewHandler}" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:background="@drawable/bg_yellow"
+                    android:onClick="@{viewHandler::onItemClicked}"
+                    android:text="@string/submit_for_verification"
+                    android:textAllCaps="false"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</layout>

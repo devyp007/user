@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.appointment.MyAppointmentViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <include
+            android:id="@+id/include_layout_appointment"
+            layout="@layout/layout_appointment"
+            android:visibility="@{viewModel.observer.screenHandler == 0? View.VISIBLE : View.GONE}"
+            app:viewHandler="@{viewHandler}"
+            app:viewModel="@{viewModel}" />
+
+<!--        <include-->
+<!--            android:id="@+id/include_payment_page"-->
+<!--            layout="@layout/layout_payment_option"-->
+<!--            android:visibility="@{viewModel.observer.screenHandler == 4? View.VISIBLE : View.GONE}"-->
+<!--            app:viewHandler="@{viewHandler}"-->
+<!--            app:viewModel="@{viewModel}"-->
+<!--            tools:visibility="gone" />-->
+
+<!--        <include-->
+<!--            android:id="@+id/include_confirmation_page"-->
+<!--            layout="@layout/layout_confirmation_page"-->
+<!--            android:visibility="@{viewModel.observer.screenHandler == 3? View.VISIBLE : View.GONE}"-->
+<!--            app:viewHandler="@{viewHandler}"-->
+<!--            app:viewModel="@{viewModel}"-->
+<!--            tools:visibility="gone" />-->
+
+<!--        <include-->
+<!--            android:id="@+id/include_appointment_confirmed"-->
+<!--            layout="@layout/layout_appointment_confirmed"-->
+<!--            android:visibility="@{viewModel.observer.screenHandler == 2? View.VISIBLE : View.GONE}"-->
+<!--            app:viewHandler="@{viewHandler}"-->
+<!--            app:viewModel="@{viewModel}"-->
+<!--            tools:visibility="gone" />-->
+
+        <include
+            android:id="@+id/include_appointment_completed"
+            layout="@layout/layout_appointment_completed"
+            android:visibility="@{viewModel.observer.screenHandler == 1? View.VISIBLE : View.GONE}"
+            app:viewHandler="@{viewHandler}"
+            app:viewModel="@{viewModel}"
+            tools:visibility="gone" />
+
+        <include
+            android:id="@+id/include_drawer"
+            layout="@layout/layout_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:viewHandler="@{viewHandler}" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

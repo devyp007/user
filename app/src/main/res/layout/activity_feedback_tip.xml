@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.feedback.FeedbackViewModel" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray">
+
+        <LinearLayout
+            android:id="@+id/ll_feedback_tip_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="@{viewModel.observer.uiObserver == 1? View.VISIBLE: View.GONE}">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?attr/actionBarSize">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:onClick="@{viewHandler::onItemClicked}"
+                        android:src="@drawable/ic_back" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Large.Black.Bold"
+                        android:layout_centerInParent="true"
+                        android:text="Feedback" />
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Title"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:text="@string/was_booking_your_appoint_easy"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/light_black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_extra_round_corner"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_8sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_6sdp"
+                            android:tint="@color/green"
+                            app:srcCompat="@drawable/ic_agree" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Title.Black.Bold"
+                            android:layout_gravity="center"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:text="@string/text_yes" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:background="@drawable/bg_extra_round_corner"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_8sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_6sdp"
+                            app:srcCompat="@drawable/ic_un_check" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Title.Black.Bold"
+                            android:layout_gravity="center"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:text="@string/text_no" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Title"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Was your provider on time?"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/light_black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_extra_round_corner"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_8sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_6sdp"
+                            android:tint="@color/green"
+                            app:srcCompat="@drawable/ic_agree" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Title.Black.Bold"
+                            android:layout_gravity="center"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:text="@string/text_yes" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:background="@drawable/bg_extra_round_corner"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_8sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_6sdp"
+                            app:srcCompat="@drawable/ic_un_check" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Title.Black.Bold"
+                            android:layout_gravity="center"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:text="@string/text_no" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Title"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/would_you_recommend_qwikcare_to_others"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/light_black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_extra_round_corner"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_8sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_6sdp"
+                            android:tint="@color/green"
+                            app:srcCompat="@drawable/ic_agree" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Title.Black.Bold"
+                            android:layout_gravity="center"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:text="@string/text_yes" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:background="@drawable/bg_extra_round_corner"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_8sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_6sdp"
+                            app:srcCompat="@drawable/ic_un_check" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Title.Black.Bold"
+                            android:layout_gravity="center"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:text="@string/text_no" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Title"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/overall_how_would_you_rate_your_qwikcare_experience" />
+
+                <RatingBar
+                    android:id="@+id/rating_agent"
+                    style="@style/Widget.QuickTrip.RatingBar.Orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@android:color/transparent"
+                    android:numStars="5"
+                    android:rating="4.5" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Title"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/do_you_want_tip"
+                    android:textColor="@color/color_orange" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="@drawable/bg_login_et"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Title"
+                        android:layout_weight="1"
+                        android:text="@string/amount_of_tip"
+                        android:textAlignment="textStart" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_email"
+                        style="@style/Widget.QuickTrip.Text.Content.EditText"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_weight="3"
+                        android:background="@color/white"
+                        android:gravity="start"
+                        android:hint="$5.0"
+                        android:letterSpacing=".1"
+                        android:textAlignment="center"
+                        tools:ignore="RtlCompat" />
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Title"
+                    android:text="100% of all tips go directly to your Provider!"
+                    android:textColor="@color/green" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_submit_your_feedback_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/bg_btn_yellow"
+                    android:onClick="@{viewHandler::onItemClicked}"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Black.Bold"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:text="Submit Your Feedback" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/include_layout_feedback"
+                layout="@layout/layout_feedback"
+                android:visibility="@{viewModel.observer.uiObserver == 0? View.VISIBLE: View.GONE}"
+                app:viewHandler="@{viewHandler}"
+                app:viewModel="@{viewModel}"
+                tools:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</layout>

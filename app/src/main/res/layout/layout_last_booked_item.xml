@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        app:cardCornerRadius="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_4sdp">
+
+            <FrameLayout
+                android:id="@+id/rv_hairstylist_image"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_margin="@dimen/_4sdp">
+
+                <FrameLayout
+                    android:id="@+id/cild_frame"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_user_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_hairstylist"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/user" />
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_available"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:src="@drawable/available" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_hairstylist_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@id/rv_hairstylist_image">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_hair_stylist_name"
+                    style="@style/Widget.QuickTrip.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/pitar_parker"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_toEndOf="@id/tv_hair_stylist_name"
+                    app:srcCompat="@drawable/ic_verified" />
+
+                <RelativeLayout
+                    android:id="@+id/ll_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_hair_stylist_name"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_navigation"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/_4sdp"
+                        android:src="@drawable/ic_location" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.QuickTrip.Text.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="@dimen/_6sdp"
+                        android:layout_toEndOf="@id/iv_navigation"
+                        android:text="@string/address"
+                        android:textAlignment="center" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RatingBar
+                android:id="@+id/rating_agent"
+                style="@style/Widget.QuickTrip.RatingBar.White"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_below="@id/rl_hairstylist_detail"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="-15dp"
+                android:background="@android:color/transparent"
+                android:numStars="5"
+                android:rating="4.5"
+                android:scaleX="0.15"
+                android:scaleY="0.2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.QuickTrip.Text.Tiny"
+                android:layout_below="@id/rl_hairstylist_detail"
+                android:layout_toEndOf="@id/rating_agent"
+                android:layout_marginStart="-80dp"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="@string/_475_reviews"
+                android:textSize="@dimen/_6sdp" />
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:id="@+id/btn_learn_more"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="@dimen/_25sdp"-->
+<!--                android:layout_below="@id/rl_hairstylist_detail"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginTop="-3dp"-->
+<!--                android:background="@drawable/bg_green_rect"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:onClick="@{viewHandler::onItemClicked}"-->
+<!--                android:text="@string/learn_more"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/_8sdp" />-->
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "425367007599",
+    "firebase_url": "https://qwiktrip-1584009286731.firebaseio.com",
+    "project_id": "qwiktrip-1584009286731",
+    "storage_bucket": "qwiktrip-1584009286731.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425367007599:android:32027341b636e41ff5b89a",
+        "android_client_info": {
+          "package_name": "com.qwiktrips.user.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "425367007599-r3vqpbvq9hdictmv112lfc88841du35b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qwiktrips.user.app",
+            "certificate_hash": "e0fdea5dbbe099e737ac50c9483b5f8c89b6ddd2"
+          }
+        },
+        {
+          "client_id": "425367007599-0jo5mfkqg2gu0c0qr7jjo3g26pbo8rhp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_3wIXlkcJwuPO_o54ENVFOdcHnipYOcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "425367007599-0jo5mfkqg2gu0c0qr7jjo3g26pbo8rhp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

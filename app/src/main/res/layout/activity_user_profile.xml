@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.profile.userprofile.UserProfileViewModel" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <include
+            android:id="@+id/include_layout_user_profile"
+            layout="@layout/layout_user_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{viewModel.observer.screenObserver == 0? View.VISIBLE : View.GONE}"
+            app:viewHandler="@{viewHandler}"
+            app:viewModel="@{viewModel}" />
+
+        <include
+            layout="@layout/layout_profile_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:viewHandler="@{viewHandler}"
+            tools:visibility="gone" />
+        <!--android:visibility="@{viewModel.observer.screenObserver == 1? View.VISIBLE : View.GONE}"-->
+
+        <!--        <com.google.android.material.navigation.NavigationView-->
+        <!--            android:id="@+id/nav_view_main"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_gravity="start"-->
+        <!--            android:background="@{viewModel.drawerObserver.type==1? @drawable/bg_nav_small : @drawable/bg_nav, default=@drawable/bg_nav_small}"-->
+        <!--            android:fitsSystemWindows="true"-->
+        <!--            app:headerLayout="@layout/layout_drawer" />-->
+
+        <include
+            android:id="@+id/include_drawer"
+            layout="@layout/layout_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:viewHandler="@{viewHandler}" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

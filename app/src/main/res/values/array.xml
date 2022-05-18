@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="hair_styles">
+        <item>Select Your HairStyle</item>
+        <item>Short Hair</item>
+        <item>Long Hair</item>
+        <item>Coloring</item>
+        <item>Weave Extensions</item>
+        <item>Blowouts</item>
+
+    </string-array>
+
+
+</resources>

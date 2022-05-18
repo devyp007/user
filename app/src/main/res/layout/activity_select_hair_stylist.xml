@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.hairstylist.select.SelectHairStyleViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{viewModel.observer.screenHandler == 0? View.VISIBLE : View.GONE}"
+            android:background="@color/light_gray">
+
+            <RelativeLayout
+                android:id="@+id/rl_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/select_hair_stylist_background" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Large"
+                    android:layout_centerInParent="true"
+                    android:text="@string/hairstylists"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_30sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:onClick="@{viewHandler::onItemClicked}"
+                android:src="@drawable/ic_back"
+                app:tint="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ll_abc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_header"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.QuickTrip.Text.Title.Regular.Bold"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="@string/choose_your_preferred_style"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/txt_dark_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_13sdp">
+
+                    <!--                <Spinner-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="@dimen/_40sdp"-->
+                    <!--                    android:background="@drawable/bg_white_round_corner"-->
+                    <!--                    android:entries="@array/hair_styles"-->
+                    <!--                    android:spinnerMode="dropdown" />-->
+
+                    <!--                <androidx.appcompat.widget.AppCompatImageView-->
+                    <!--                    android:layout_width="@dimen/_10sdp"-->
+                    <!--                    android:layout_height="@dimen/_24sdp"-->
+                    <!--                    android:layout_alignParentEnd="true"-->
+                    <!--                    android:layout_centerInParent="true"-->
+                    <!--                    android:layout_marginEnd="@dimen/_20sdp"-->
+                    <!--                    app:srcCompat="@drawable/arrow" />-->
+
+                    <!--                <include-->
+                    <!--                    android:id="@+id/include_style_select"-->
+                    <!--                    layout="@layout/layout_style_select"-->
+                    <!--                    app:viewHandler="@{viewHandler}"-->
+                    <!--                    app:viewModel="@{viewModel}" />-->
+
+                    <RelativeLayout
+                        android:id="@+id/ll_style_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_login_et"
+                        android:orientation="horizontal"
+
+                        android:padding="@dimen/_8sdp">
+
+
+                        <!--  <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_style_select"
+                            style="@style/Widget.QuickTrip.Text.Content.EditText"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="start"
+                            android:letterSpacing=".1"
+                            android:onClick="@{viewHandler::onItemClicked}"
+                            android:text="@{viewModel.observer.styleSelectText}"
+                            android:textColor="@color/darker_gray"
+                            tools:text="@string/select_your_service" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_gender_drop_down"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:onClick="@{viewHandler::onItemClicked}"
+                            android:src="@drawable/ic_arrow_drop_down"
+                            android:visibility="@{viewModel.observer.dropDown == true? View.GONE : View.VISIBLE}" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_gender_drop_up"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:onClick="@{viewHandler::onItemClicked}"
+                            android:src="@drawable/ic_arrow_drop_up"
+                            android:visibility="@{viewModel.observer.dropDown == true? View.VISIBLE : View.GONE}" />-->
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_20sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_style_select"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_50sdp"
+                            android:background="@color/white"
+                            android:gravity="start"
+                            android:text="Select Your Hairstyle"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_dash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_style_select"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:letterSpacing=".3"
+                        android:singleLine="true"
+                        android:text="----------------------------------------"
+                        android:textAlignment="center" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_enter_your_zip_code"
+                        style="@style/Widget.QuickTrip.Text.Title.Regular.Bold"
+                        android:layout_below="@id/tv_dash"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/enter_your_zip_code_to_find_your_provider_location"
+                        android:textAlignment="textStart"
+                        android:textColor="@{viewModel.observer.gpsChecked? @color/light_black : @color/drawer_color}" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_zip_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/tv_enter_your_zip_code"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@{viewModel.observer.gpsChecked?@drawable/bg_white_round_corner:@drawable/bg_disabled}"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="match_parent"
+                            android:background="@{viewModel.observer.gpsChecked?@color/white:@color/color_disable}"
+                            android:padding="@dimen/_13sdp"
+                            app:srcCompat="@drawable/ic_user" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@{viewModel.observer.gpsChecked?@color/white:@color/color_disable}"
+                            android:enabled="@{viewModel.observer.gpsChecked? true : false}"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/zip_code"
+                            tools:background="@color/color_disable"
+                            android:singleLine="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/ll_zip_code"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@{viewModel.observer.gpsChecked?@drawable/bg_white_round_corner:@drawable/bg_disabled}"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="match_parent"
+                            android:background="@{viewModel.observer.gpsChecked?@color/white:@color/color_disable}"
+                            android:padding="@dimen/_13sdp"
+                            app:srcCompat="@drawable/street_address" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@{viewModel.observer.gpsChecked?@color/white:@color/color_disable}"
+                            android:enabled="@{viewModel.observer.gpsChecked? true : false}"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Street 34, H#24 - P324"
+                            tools:background="@color/color_disable" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/ll_address"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.QuickTrip.Text.Title.Regular"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="@string/enable_your_gps"
+                            android:textAlignment="textStart"
+                            android:textColor="@{viewModel.observer.gpsChecked? @color/black : @color/drawer_color}"
+                            tools:ignore="RtlCompat" />
+
+                        <com.suke.widget.SwitchButton
+                            android:id="@+id/gps_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/yellow"
+                            android:thumbTint="@color/yellow"
+                            android:trackTint="@color/yellow"
+                            app:sb_checkline_color="@color/transparent"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp"
+                        android:layout_below="@id/ll_style_select"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="-3dp"
+                        android:visibility="@{viewModel.observer.dropDown == true? View.VISIBLE : View.GONE}"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/layout_style_item"
+                        tools:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:layout_below="@id/ll_abc"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                app:cardBackgroundColor="@{viewModel.observer.gpsChecked? @color/primary_color : @color/gray}"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@{viewModel.observer.gpsChecked? @color/primary_color : @color/gray}"
+                    android:fontFamily="@font/poppins_regular"
+                    android:onClick="@{viewHandler::onItemClicked}"
+                    android:text="@string/next"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <!--<include
+            android:id="@+id/include_payment_page"
+            layout="@layout/layout_payment_option"
+            android:visibility="@{viewModel.observer.screenHandler == 1? View.VISIBLE : View.GONE}"
+            app:viewHandler="@{viewHandler}"
+            app:viewModel="@{viewModel}"
+            tools:visibility="gone" />
+
+        <include
+            android:id="@+id/include_confirmation_page"
+            layout="@layout/layout_confirmation_page"
+            android:visibility="@{viewModel.observer.screenHandler == 2? View.VISIBLE : View.GONE}"
+            app:viewHandler="@{viewHandler}"
+            app:viewModel="@{viewModel}"
+            tools:visibility="gone" />
+
+        <include
+            android:id="@+id/include_appointment_confirmed"
+            layout="@layout/layout_appointment_confirmed"
+            android:visibility="@{viewModel.observer.screenHandler == 3? View.VISIBLE : View.GONE}"
+            app:viewHandler="@{viewHandler}"
+            app:viewModel="@{viewModel}"
+            tools:visibility="gone" />-->
+
+    </LinearLayout>
+    </ScrollView>
+
+</layout>

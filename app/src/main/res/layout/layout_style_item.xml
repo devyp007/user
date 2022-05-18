@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <import
+            alias="view"
+            type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_gender_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-3dp"
+        android:background="@drawable/bg_style_item"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_male"
+            style="@style/Widget.QuickTrip.Text.Title.Black.Bold"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="start"
+            android:onClick="@{viewHandler::onItemClicked}"
+            android:text="@string/short_hair"
+            android:textColor="@color/darker_gray" />
+
+    </LinearLayout>
+
+</layout>

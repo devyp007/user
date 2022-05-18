@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hairstylists">HairStylists</string>
+    <string name="enter_your_zip_code_to_find_your_provider_location">Enter Your Zip Code To Find Your Provider Location</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="enable_your_gps">Enable Your GPS</string>
+    <string name="next">Next</string>
+    <string name="learn_more">Learn More</string>
+    <string name="_475_reviews">475 Reviews</string>
+    <string name="hair_dresser">Hair Dresser</string>
+    <string name="live_chat">Live Chat</string>
+    <string name="short_hair_cut">Short Hair Cut</string>
+    <string name="services_">Services</string>
+    <string name="jorge_martin">Jorge Martin</string>
+    <string name="text_comment">"This man is amazing and very experienced in his work. I really love the haristyle he has done for me and now i am 100% happy with his work "</string>
+    <string name="text_reviews">Reviews (475)</string>
+    <string name="tet_time">23-11-2020</string>
+    <string name="shanta_lana">Shanta Lana</string>
+    <string name="text_phone_number">(555) 555-1234</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="county">Country</string>
+    <string name="text_address">Address</string>
+    <string name="text_save">Save</string>
+    <string name="log_out">Logout</string>
+    <string name="log_out_message">Are you sure you want to logout?</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_your_service">Select your service</string>
+    <string name="card_holder_name">Card Holder Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_expiry">Expiry</string>
+    <string name="card_cvv">CVV</string>
+    <string name="submit_for_verification">Submit For Verification</string>
+    <string name="text_issued_licence">State-Issued ID / Driver\'s License</string>
+    <string name="profile_saved_successfully">Profile Saved Successfully!</string>
+    <string name="okay">Okay</string>
+    <string name="short_hair">Short Hair</string>
+    <string name="long_hair">Long Hair</string>
+    <string name="coloring">Coloring</string>
+    <string name="completed">Completed</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="view_details">View Details</string>
+    <string name="dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<font color="#FFB400"><u> Lorem Ipsum has been the industry standard dummy text ever since the 1500s</u></font>, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="time">10 min ago</string>
+    <string name="appointment_completed">Appointment Completed</string>
+    <string name="your_appointment_is_completed">Your Appointment is Completed!</string>
+    <string name="msg_appointment_completed">Thanks for using QwikCare! We appreciate your business. Please share your feedback with us to  let us know how we are doing.</string>
+    <string name="share_your_feed_back">Share Your Feedback</string>
+    <string name="appointment_confirmed">Appointment Confirmed</string>
+    <string name="msg_appointment_booked">Your Appointment is Booked!</string>
+    <string name="get_your_receipt">See your booking</string>
+    <string name="summary">Summary</string>
+    <string name="total_price">Total price:</string>
+    <string name="service_fee">Service fee:</string>
+    <string name="total">Total:</string>
+    <string name="thank_you_for_booking_your_appointment_with_john_smith_to_make_sure_that_is_a_smooth_enjoyable_experience_please_do_the_following"><![CDATA[Thank you for booking your appointment with John Smith. To make sure that is a smooth & enjoyable experience, please do the following]]></string>
+    <string name="arrive_on_time_be_ready_when_your_provider_arrives">Please arrive on time or be ready when your provider arrives</string>
+    <string name="text_download">Download</string>
+    <string name="text_thank_you">Thank You</string>
+    <string name="text_delete_request">Delete request</string>
+    <string name="msg_appointment_delete">Are you sure you<br></br> want to delete this appointment?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="_04">04</string>
+    <string name="text_payment_option">Payment Option</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="text_confirm_payment">Confirm Payment</string>
+    <string name="text_cart">CART</string>
+    <string name="would_you_recommend_qwikcare_to_others">Would you recommend <font color="#000000"><b>QwikCare</b></font> to others?</string>
+    <string name="overall_how_would_you_rate_your_qwikcare_experience">Overall, how would you \nrate your <font color="#000000"><b>QwikCare</b></font> experience?</string>
+    <string name="do_you_want_tip"><u>Do you want to tip your provider?</u></string>
+    <string name="amount_of_tip">Amount of tip</string>
+    <string name="was_booking_your_appoint_easy">Was booking your appoint easy?</string>
+    <string name="book_now">Book Now</string>
+
+
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.qwiktrips.user.app.utils.helper.ViewItemClickHandler" />
+
+        <variable
+            name="header"
+            type="String" />
+
+        <variable
+            name="body"
+            type="String" />
+
+        <variable
+            name="positiveButtonName"
+            type="String" />
+
+        <variable
+            name="negativeButtonName"
+            type="String" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:minWidth="@dimen/_200sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_6sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:minWidth="@dimen/_200sdp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.QuickTrip.Text.Title.Black.Bold"
+                android:text="@{header, default=`Test`}" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.QuickTrip.Text"
+                android:layout_margin="@dimen/_15sdp"
+                android:text="@{body, default=`Test`}" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_cancel"
+                    style="@style/Widget.QuickTrip.Text.Title.Yellow.Bold"
+                    android:onClick="@{viewHandler::onItemClicked}"
+                    android:text="@{negativeButtonName, default=`Test`}" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_positive"
+                    style="@style/Widget.QuickTrip.Text.Title.Yellow.Bold"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:onClick="@{viewHandler::onItemClicked}"
+                    android:text="@{positiveButtonName, default=`Test`}" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

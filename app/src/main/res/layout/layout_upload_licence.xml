@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+
+        <include layout="@layout/include_upload_licence"/>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/bg_nav"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/layout_drawer" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

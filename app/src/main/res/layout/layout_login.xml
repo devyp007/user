@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.qwiktrips.user.app.ui.login.LoginViewModel" />
+
+        <variable
+            name="type"
+            type="int" />
+
+        <import type="android.text.InputType" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:cardElevation="@dimen/_6sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            tools:ignore="UnusedAttribute">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@{type== 0? @drawable/ic_email : @drawable/ic_lock}"
+                android:tint="@color/gray"
+                tools:src="@drawable/ic_email" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_email"
+                style="@style/Widget.QuickTrip.Text.Content.EditText"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:background="@color/white"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="start"
+                android:hint="@{type == 0? @string/email_or_username: @string/password}"
+                android:inputType="@{type == 0? InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS : InputType.TYPE_TEXT_VARIATION_PASSWORD}"
+                android:letterSpacing=".1"
+                tools:hint="@string/app_name" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
